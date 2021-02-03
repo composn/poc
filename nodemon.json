@@ -1,8 +1,4 @@
 {
-  "ignore": [
-    ".git",
-    "node_modules",
-    ".idea"
-  ],
+  "ignore": [".git", "node_modules", ".idea"],
   "ext": "js,json"
 }

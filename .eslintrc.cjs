@@ -9,8 +9,7 @@ module.exports = {
     sourceType: 'module',
     allowImportExportEverywhere: true,
   },
-  extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
-  plugins: ['prettier'],
+  extends: ['airbnb-base', 'prettier'],
   ignorePatterns: ['index.js'],
   rules: {
     'import/extensions': [
