@@ -5,14 +5,16 @@ import Koa from 'koa';
 import koaBody from 'koa-body';
 import jwt from 'koa-jwt';
 
-import autoLoadRouter from './auto-load-router';
+import autoLoadRouter from './lib/auto-load-router';
 import permissionCheckController from './middlewares/permission-check-controller';
 
 const app = new Koa();
 const router = await autoLoadRouter();
 
 app
-  .use(jwt({ secret: process.env.JWT_SECRET, passthrough: true }))
+  .use(
+    jwt({ secret: process.env.JWT_SECRET, passthrough: true, key: 'payload' }),
+  )
   .use(koaBody())
   .use(permissionCheckController)
   .use(router.routes())

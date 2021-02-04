@@ -1,4 +1,3 @@
 export default async function find(ctx, next) {
-  console.log('foo');
-  ctx.body = 'foo';
+  ctx.body = { foo: 'foo' };
 }
