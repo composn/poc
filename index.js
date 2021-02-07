@@ -5,10 +5,12 @@ import Koa from 'koa';
 import koaBody from 'koa-body';
 import jwt from 'koa-jwt';
 
-import defineCtxRoles from './lib/middlewares/define-ctx-roles';
-import checkControllerPermission from './lib/middlewares/check-controller-permission';
-import AutoLoadRouter from './lib/auto-load-router';
-import ac from './lib/access-control';
+import {
+  defineCtxRoles,
+  checkControllerPermission,
+  AutoLoadRouter,
+  ac,
+} from './resolver';
 
 const rolesTree = {
   name: 'public',
